@@ -16,7 +16,7 @@ header i{
     margin: auto 10% auto auto;
 }
 #openBtn{
-    font-size:24px;
+    font-size:32px;
 }
 .slogan{
     width:100%;
@@ -30,10 +30,12 @@ header i{
 .slogan h1{
     align-self:end;
     color:#fff;
+    border-bottom:1px solid #fff;
 }
 .slogan h2{
     align-self: start;
     color:#fff;
+    font-size:20px;
 }
 
 /* Grid layouts */
@@ -51,13 +53,13 @@ nav{
 /* Images */
 
 .logo{
-    width: 90%;
-    margin: auto;
+    width: 80%;
+    margin-left:-0.3em;
+    margin-top:0.3em;
 }
 .about-img{
     width: 100%;
     padding-top:20px;
-    filter: grayscale(100%);
 }
 .slogan{
     width:100%;
@@ -88,12 +90,15 @@ nav{
     text-transform: uppercase;
     padding-bottom:1em;
 }
+.produse a {
+    width:80%;
+}
 .produse img{
     width: 100%;
 }
 
 .produse article {
-    width:80%;
+    width:100%;
     border:1px solid #000;
     background-color:#000;
     color:#fff;
@@ -103,6 +108,35 @@ nav{
     padding:0.5em 0;
     font-weight: 400;
     font-size:1em;
+}
+.contact-us {
+    padding-bottom:2.5em;
+}
+.contact-us h2{
+    text-align: center;
+    font-weight: 400;
+    padding:1em;
+}
+.contact-us p {
+    text-align: center;
+    padding-top:1em;
+}
+.contact-us .fa-smile-o {
+    font-size:70px;
+    color:#016FB9;
+}
+
+.contact-us a {
+    display: block;
+    margin: auto;
+    text-align: center;
+    width:200px;
+    padding:10px;
+    background:#000;
+    border-radius:5px;
+    color:#A2CAE5;
+    font-size:22px;
+    border:1px solid #A2CAE5;
 }
 .contactinfo{
     display: grid;
@@ -117,22 +151,27 @@ nav{
     letter-spacing: 1px;
     padding-bottom:0.5em;
     text-transform: uppercase;
+    text-decoration: underline;
 }
 .contactinfo .phoneno a {
     line-height: 20px;
 }
 .contactinfo p {
-    font-size:12px;
+    display:block;
+    text-align: center;
+    background:#000;
+    font-size:14px;
+    color:#A2CAE5;
+    line-height: 26px;
 }
 .contactinfo p span {
-    color:#A2CAE5;
-}
-
-.fa-phone-square {
-    color:#00c906;
+    color:#fff;
 }
 .phoneno{
     display: grid;
+}
+.phoneno a {
+    font-size:20px;
 }
 .socialmedia{
     display: grid;
@@ -140,10 +179,9 @@ nav{
     justify-items: center;
 }
 
-.contactinfo a i {
-    font-size:30px;
+.socialmedia img {
+    width:80%;
 }
-
 /* HR styling */
 
 hr.style-eight {
