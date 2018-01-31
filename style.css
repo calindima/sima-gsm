@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* General */
+
+a{
+    text-decoration: none;
+    color:black;
+}
+header i{
+    color:white;
+    margin: auto 10% auto auto;
+}
+#openBtn{
+    font-size:24px;
+}
+.slogan{
+    width:100%;
+    height:50vh;
+    background:url('background1.jpg') no-repeat center center;
+    background-size:cover;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+.slogan h1{
+    align-self:end;
+    color:#fff;
+}
+.slogan h2{
+    align-self: start;
+    color:#fff;
+}
+
+/* Grid layouts */
+
+header{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    background-color: rgba(0,0,0,0);
+}
+
+nav{
+    text-align: center;
+}
+/* Images */
+
+.logo{
+    width: 90%;
+    margin: auto;
+}
+.about-img{
+    width: 100%;
+    padding-top:20px;
+    filter: grayscale(100%);
+}
+.slogan{
+    width:100%;
+    height:30vh;
+    background:url('background1.jpg') no-repeat center center;
+    background-size:cover;
+}
+.about{
+    
+}
+.about h2{
+    text-align: center;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+.about p{
+    padding:10px;
+    text-align: center;
+}
+.about p span{
+    text-decoration: underline;
+}
+.produse{
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    grid-gap: 2em;
+    text-transform: uppercase;
+    padding-bottom:1em;
+}
+.produse img{
+    width: 100%;
+}
+
+.produse article {
+    width:80%;
+    border:1px solid #000;
+    background-color:#000;
+    color:#fff;
+}
+
+.produse article h3 {
+    padding:0.5em 0;
+    font-weight: 400;
+    font-size:1em;
+}
+.contactinfo{
+    display: grid;
+    grid-gap: 1em;
+    background-color:#016FB9;
+    text-align: center;
+    padding:1em 0 0.1em 0;
+}
+
+.contactinfo h2{
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-bottom:0.5em;
+    text-transform: uppercase;
+}
+.contactinfo .phoneno a {
+    line-height: 20px;
+}
+.contactinfo p {
+    font-size:12px;
+}
+.contactinfo p span {
+    color:#A2CAE5;
+}
+
+.fa-phone-square {
+    color:#00c906;
+}
+.phoneno{
+    display: grid;
+}
+.socialmedia{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+}
+
+.contactinfo a i {
+    font-size:30px;
+}
+
+/* HR styling */
+
+hr.style-eight {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin: 1em 1em 0 1em;
+}
+hr.style-eight:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+/* Mobile slider menu */
+
+@media (max-width:1000px){
+    .sidenav {
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+    
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+}
