@@ -56,6 +56,17 @@ nav{
     width: 80%;
     margin-left:-0.3em;
     margin-top:0.3em;
+    cursor: pointer;
+}
+
+nav a {
+    transition: 0.6s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color:#A2CAE5;
 }
 .about-img{
     width: 100%;
@@ -66,9 +77,6 @@ nav{
     height:30vh;
     background:url('background1.jpg') no-repeat center center;
     background-size:cover;
-}
-.about{
-    
 }
 .about h2{
     text-align: center;
@@ -102,6 +110,16 @@ nav{
     border:1px solid #000;
     background-color:#000;
     color:#fff;
+    transition: 0.6s;
+}
+
+.produs {
+    transition:0.6s;
+}
+
+.produse article:hover, .produs:hover {
+    transform: scale(1.1);
+    filter:brightness(110%);
 }
 
 .produse article h3 {
@@ -137,11 +155,19 @@ nav{
     color:#A2CAE5;
     font-size:22px;
     border:1px solid #A2CAE5;
+    transition: 0.6s;
+}
+
+.contact-us a:hover,form input:last-child:hover {
+    background: #fff;
+    color:#016FB9;
+    border:1px solid #016FB9;
 }
 .contactinfo{
     display: grid;
     grid-gap: 1em;
-    background-color:#016FB9;
+    background:url('background1.jpg') no-repeat center center;
+    background-size:cover;
     text-align: center;
     padding:1em 0 0.1em 0;
 }
@@ -151,7 +177,7 @@ nav{
     letter-spacing: 1px;
     padding-bottom:0.5em;
     text-transform: uppercase;
-    text-decoration: underline;
+    color:#fff;
 }
 .contactinfo .phoneno a {
     line-height: 20px;
@@ -172,6 +198,15 @@ nav{
 }
 .phoneno a {
     font-size:20px;
+    color:#fff;
+    transition: 0.6s;
+}
+
+.phoneno a:hover {
+    color:#0ea035;
+}
+.phoneno a i {
+    color:#0ea035;
 }
 .socialmedia{
     display: grid;
@@ -181,6 +216,12 @@ nav{
 
 .socialmedia img {
     width:80%;
+    transition: 0.6s;
+}
+
+.socialmedia img:hover {
+    filter:brightness(130%);
+    
 }
 /* HR styling */
 
@@ -202,6 +243,176 @@ hr.style-eight:after {
     padding: 0 0.25em;
     background: white;
 }
+
+/* contact page */
+
+.formular, form {
+    display:grid;
+    justify-items:center;
+    grid-gap: 0.5em;
+    padding-bottom:1em;
+}
+
+.formular p {
+    text-align: center;
+    padding:5px 0;
+}
+
+input {
+    font-size:18px;
+    width:90%;
+}
+
+form input:last-child {
+    padding:5px;
+    background:#000;
+    border-radius:5px;
+    color:#A2CAE5;
+    border:1px solid #A2CAE5;
+    margin-top:0.5em;
+    cursor: pointer;
+    transition:0.6s;
+}
+
+/* produse */
+.products {
+    text-align: center;
+}
+
+.products h2 {
+    padding:1em 0;
+}
+.produs {
+    width:80%;
+    border:1px solid #000;
+    background-color:#000;
+    color:#fff;
+    text-align: center;
+    margin-bottom:1em !important;
+    margin: auto;
+}
+
+.produs p {
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.produs img {
+    width:100%;
+}
+
+/* Tablet version */
+@media (min-width: 768px){
+    .logo{
+        width:50%;
+        padding: 1em;
+        justify-self:start;
+    }
+    
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 50px 1fr;
+padding: 1em 0 1em 0;
+}
+    .about-img{
+        padding: 0;
+        grid-column: 1/2;
+        grid-row: 1/-1
+    }
+    .about h1{
+        grid-column: 2/-1;
+        grid-row:1/2;
+    }
+    .about p{
+        grid-column: 2/-1;
+        grid-row:2/-1;
+    }
+    .produse{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .produse h2{
+        grid-column: 1/-1;
+    }
+    .contactinfo{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .socialmedia{
+        align-items: center;
+    }
+    .socialmedia img{
+        width:60%;
+    }
+    .contactinfo p{
+        grid-column: 1/-1;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .products h2{
+        grid-column: 1/-1;
+    }
+}
+
+/* Desktop version */
+
+@media (min-width:1024px){
+    #openBtn, #closeBtn{
+        display: none;
+    }
+    nav{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-items:center;
+        align-items:start;
+        margin-top:20px;
+        width:100%;
+        font-size:22px;
+    }
+    nav a{
+        color: white;
+    }
+    .logo{
+        width:35%;
+    }
+    .slogan h1{
+    align-self:end;
+    font-size:28px;
+    color:#fff;
+    border-bottom:1px solid #fff;
+}
+    .slogan h2{
+    align-self: start;
+    color:#fff;
+    font-size:22px;
+}
+    .about p{
+    font-size:20px;
+    text-align: justify;
+    line-height: 24px;
+    justify-self:start;
+    padding:20px 10%;
+}
+    .about img{
+        width:80%;
+        display: block;
+        margin: auto;
+        
+    }
+    
+    .produse a {
+        width:55%;
+    }
+    .contact-us .fa-smile-o {
+        font-size:100px;
+    }
+    
+    .contactinfo p {
+        font-size:16px;
+    }
+}
+
 /* Mobile slider menu */
 
 @media (max-width:1000px){
@@ -212,7 +423,7 @@ hr.style-eight:after {
         z-index: 1; /* Stay on top */
         top: 0; /* Stay at the top */
         left: 0;
-        background-color: #111; /* Black*/
+        background-color: #01007f; /* Black*/
         overflow-x: hidden; /* Disable horizontal scroll */
         padding-top: 60px; /* Place content 60px from the top */
         transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -223,9 +434,10 @@ hr.style-eight:after {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 25px;
-        color: #818181;
+        color: #fff;
         display: block;
         transition: 0.3s;
+        text-transform: uppercase;
     }
     
     /* When you mouse over the navigation links, change their color */

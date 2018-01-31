@@ -1,3 +1,18 @@
+<?php
+
+if (isset($_POST['sub'])) {
+    
+    $fisier = 'Nume: ' . $_POST['nume'] . "\r\n" . 'Prenume: ' . $_POST['prenume'] . "\r\n" . 'E-Mail: ' . $_POST['email'] . "\r\n" . 'Telefon: ' . $_POST['telefon'] . "\r\n" . 'Mesaj: ' . $_POST['mesaj'] . "\r\n" . '-----------------------' . "\r\n" ;
+    $inscriere = fopen("mesaje.txt", "a+");
+    fwrite($inscriere, $fisier);
+    fclose($inscriere);
+    
+    $trimis = "<p style='color:#0ea035;font-size:20px;'>Formularul a fost trimis! In cel mai scurt timp vă vom contacta!</p>";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,33 +43,25 @@
         <h2>CARCASE - FOLII PROTECTIE</h2>
     </section>
     <hr class="style-eight">
-    <section class="products">
-      <h2>Carcase</h2>
-        <article class="produs">
-          <img src="carcasa.jpg" alt="carcasa" />
-          <p>Lorem ipsum</p>
-        </article>
-        <article class="produs">
-          <img src="carcasa.jpg" alt="carcasa" />
-          <p>Lorem ipsum</p>
-        </article>
-        <article class="produs">
-          <img src="carcasa.jpg" alt="carcasa" />
-          <p>Lorem ipsum</p>
-        </article>
-      <h2>Folii de protectie</h2>
-        <article class="produs">
-          <img src="folie.jpg" alt="folie" />
-          <p>Lorem ipsum</p>
-        </article>
-        <article class="produs">
-          <img src="folie.jpg" alt="folie" />
-          <p>Lorem ipsum</p>
-        </article>
-        <article class="produs">
-          <img src="folie.jpg" alt="folie" />
-          <p>Lorem ipsum</p>
-        </article>
+    <section class="formular">
+        <h2>Contacteaza-ne!</h2>
+        <?php echo "</br>" . $trimis . "</br>" ;?>
+      <form method="post" name="myForm" onsubmit="return validateForm();">
+           <p>Nume:</p>
+           <input name="nume" placeholder="Popescu" />
+           <p>Prenume:</p>
+           <input name="prenume" placeholder="Ion"/>
+           <p>E-Mail:</p>
+           <input type="email" name="email" placeholder="yourmail@example.com"/>
+           <p>Telefon:</p>
+           <input name="telefon" placeholder="07** *** ***"/>
+           <p>Mesaj:</p>
+          <textarea name="mesaj" rows="5" cols="40">As dori sa comand urmatoarele produse:
+          </textarea>
+          <input type="submit" name="sub" value="Trimite!"/>
+        
+        </form>
+    
     </section>
     <hr class="style-eight">
     <footer class="contactinfo">
